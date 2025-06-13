@@ -341,6 +341,26 @@
         ];
     
         btnNo.addEventListener("click", () => {
+             // Ẩn cả 2 nút
+    btnYes.style.display = "none";
+    btnNo.style.display = "none";
+
+    // Bắt đầu chạy lời từ chối từ từ
+    let current = 0;
+
+    const interval = setInterval(() => {
+        if (current < messagesForNo.length) {
+            msgYes.innerHTML = messagesForNo[current];
+            msgYes.style.display = "block";
+            msgYes.classList.add("show");
+            current++;
+        } else {
+            clearInterval(interval);
+            // Khi chạy xong hết danh sách, bung lụa tỏ tình
+            msgYes.innerHTML = "Thôi được rồi, tớ không chờ được nữa. Làm người yêu tớ đi nhaaa 🥺💕";
+        }
+    }, 1500); // mỗi câu cách nhau 1.5s, chỉnh chậm hơn hay nhanh hơn tùy bạn
+
             changeMessageForNo();
         });
     
