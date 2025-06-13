@@ -17,7 +17,7 @@
             width: 100%;
             margin: 0;
             display: flex;
-            background-color: #fd7b97;
+            background-color: #33a2c4;
             justify-content: center;
             align-items: center;
             font-family: 'Merriweather', serif;
@@ -49,7 +49,7 @@
             padding: 10px 20px;
             font-size: 18px;
             cursor: pointer;
-            background-color: #ce4f6a;
+            background-color: #3e76bb;
             color: white;
             border: none;
             border-radius: 10px;
@@ -68,7 +68,7 @@
         }
 
         a {
-            color: #f86f6f;
+            color: #34a2ce;
             transition: opacity 0.3s ease;
             font-family: 'Times New Roman', 'Arial', sans-serif;
         }
@@ -120,7 +120,7 @@
 
         #btnYes:hover,
         #btnNo:hover {
-            background-color: #d37da8;
+            background-color: #7daed3;
             transform: translateY(-4px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
@@ -137,7 +137,7 @@
             font-size: 20px;
             margin: 10px;
             padding: 30px;
-            border: 2px solid #f19fb3;
+            border: 2px solid #9fd0f1;
             border-radius: 8px;
             background-color: #ffffff;
             text-align: center;
@@ -172,7 +172,7 @@
             font-size: 18px;
             display: block;
             padding: 30px;
-            border: 2px solid #f19fb3;
+            border: 2px solid #9fb8f1;
             border-radius: 10px;
             background-color: #ffffff;
             text-align: center;
@@ -191,7 +191,7 @@
             font-size: 22px;
             margin: 10px;
             padding: 30px;
-            border: 2px solid #f19fb3;
+            border: 2px solid #9fcdf1;
             border-radius: 8px;
             background-color: #ffffff;
             text-align: center;
@@ -220,7 +220,7 @@
             padding: 10px 20px;
             margin-top: 10px;
             cursor: pointer;
-            background-color: #ce4f6a;
+            background-color: #4f88ce;
             color: white;
             border: none;
             border-radius: 10px;
@@ -230,7 +230,7 @@
         }
 
         button:hover {
-            background-color: #d37da8;
+            background-color: #7db3d3;
         }
 
         button:active {
@@ -245,26 +245,27 @@
     <audio id="audio" src="./p1.mp3"></audio>
     <div>
         <h1 id="messageTitle">Bạn có tin nhắn quan trọng</h1>
-        <p id="messageText">Xem ngay</p>
+        <p id="messageText">Thỉnh xem ngay</p>
         <button id="btn">
             <img src="./letters.png" alt="Description">
         </button>
-        <div class="message">Hi cậu,</div>
-        <div class="message">Đầu tiên, cảm ơn cậu rất nhiều vì đã đọc lá thư này.</div>
-        <div class="message">Tớ có một điều muốn nói, nhưng không biết bắt đầu từ đâu.</div>
-        <div class="message">Cậu đồng ý...</div>
+        <div class="message">Vị huynh đài à,</div>
+        <div class="message">Đầu tiên, cảm ơn các hạ rất nhiều vì đã đọc lá thư này.</div>
+        <div class="message">Vốn dĩ lời nói chẳng ít, nhưng nghĩ mãi chẳng biết nên mở đầu ra sao.</div>
+        <div class="message">Hôm nay mạnh dạn viết mấy lời, chỉ mong huynh chớ trách tiểu đệ nhiều chuyện.</div>
+        <div class="message">Huynh đài liệu có sẵn lòng...</div>
 
         <div id="msgYes" class="message-text" style="display: none;"><img id="yesImage"
                 src="https://i.pinimg.com/originals/dc/b9/6f/dcb96f174bb3e9615a4f7d5e9e161f14.gif" alt="Description">
-            Cậu đồng ý làm người yêu tớ nhaaaa 💕</div>
+            Có sẵn lòng ban cho tiểu đệ chút ngân lượng?</div>
         <div class="div-buttons">
-            <button id="btnYes" style="display: none;">Đồng ý</button>
+            <button id="btnYes" style="display: none;">OCEEE</button>
             <button id="btnNo" style="display: none;">Không</button>
         </div>
 
         <div id="messageBox" class="message-text hide">
-            <a>Tớ biết mà! Viết lời nhắn của cậu vào đây:</a>
-            <textarea id="userMessage" rows="4" cols="50" placeholder="Nhập lời nhắn của bạn..."></textarea><br>
+            <a>Tiểu đệ biết mà! Có gì cho đệ xin con số mà huynh tính chuyển vào đây:</a>
+            <textarea id="userMessage" rows="4" cols="50" placeholder="Nhập lời nhắn gì cũng được..."></textarea><br>
             <button id="btnSend">Gửi cậu</button>
         </div>
     </div>
@@ -333,11 +334,11 @@
     
         // Khi nhấn "No"
         const messagesForNo = [
-            "Cậu vừa bảo gì cơ",
-            "Cậu bảo không",
-            "Không thể không yêu nhau sao",
-            "Cảm ơn cậu đã nhận lời yêu tớ.",
-            "Xíu tớ qua đón đi chơi"
+            "Đệ vừa bảo gì cơ",
+            "Đệ bảo không..",
+            "Không thể không cho sao",
+            "Cảm ơn đệ đã đồng ý cho ít xiền.",
+            "Xíu đệ xin phép gửi cái mã QR"
         ];
     
         btnNo.addEventListener("click", () => {
@@ -357,7 +358,7 @@
         } else {
             clearInterval(interval);
             // Khi chạy xong hết danh sách, bung lụa tỏ tình
-            msgYes.innerHTML = "Thôi được rồi, tớ không chờ được nữa. Làm người yêu tớ đi nhaaa 🥺💕";
+            msgYes.innerHTML = "🥺";
         }
     }, 1500); // mỗi câu cách nhau 1.5s, chỉnh chậm hơn hay nhanh hơn tùy bạn
 
@@ -386,7 +387,7 @@
             const message = userMessage.value.trim();
     
             if (!message) {
-                alert("Nhập gì đó đi cậu ơi 😢");
+                alert("Nhập gì đó đi 😢");
                 return;
             }
     
@@ -401,7 +402,7 @@
                 body: new URLSearchParams({ message: message })
             })
             .then(response => {
-                alert("Tớ nhận được rồi 🥹 Cảm ơn cậu nhiều nhiều!");
+                alert("Tại hạ nhận được rồi 🥹 Cảm ơn đệ nhiều nhiều!");
                 userMessage.value = "";
             })
             .catch(error => {
